@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Undangan</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* COVER */
+#cover {
+  position: fixed;
+  inset: 0;
+  background: #d8c3a5; /* coklat muda elegan */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+/* BUTTON */
+#openBtn {
+  padding: 16px 36px;
+  font-size: 18px;
+  border: none;
+  border-radius: 40px;
+  background: #8b5e3c;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  transition: 0.3s ease;
+}
+
+#openBtn:hover {
+  background: #6f4529;
+  transform: scale(1.05);
+}
+
+/* CANVA */
+iframe {
+  width: 100%;
+  height: 100vh;
+  border: none;
+  display: none;
+}
+</style>
+</head>
+
+<body>
+
+<!-- COVER -->
+<div id="cover">
+  <button id="openBtn" onclick="openInvitation()">Buka Undangan</button>
+</div>
+
+<!-- AUDIO -->
+<audio id="bgm" loop>
+  <source src="lagu.mp3" type="audio/mpeg">
+</audio>
+
+<!-- CANVA -->
+<iframe 
+  id="canvaFrame"
+  src="https://www.canva.com/design/XXXX/view">
+</iframe>
+
+<script>
+function openInvitation() {
+  document.getElementById("bgm").play();
+  document.getElementById("cover").style.display = "none";
+  document.getElementById("canvaFrame").style.display = "block";
+}
+</script>
+
+</body>
+</html>
