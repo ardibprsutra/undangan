@@ -43,6 +43,13 @@
       width: 120px;
       margin-top: 40px;
     }
+
+    #play-music-btn {
+      margin-top: 30px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
@@ -53,5 +60,21 @@
     PT BPR Bunga Sutra Mas
   </div>
   <img src="https://i.ibb.co/L54BTfX/white-lily-flower.png" alt="White Lily Flower" class="flower" />
+
+  <!-- Tombol untuk mainkan musik -->
+  <button id="play-music-btn">Putar Musik</button>
+
+  <!-- Audio background -->
+  <audio id="bg-music" src="your-music-file.mp3" loop></audio>
+
+  <script>
+    const btn = document.getElementById('play-music-btn');
+    const music = document.getElementById('bg-music');
+    
+    btn.addEventListener('click', () => {
+      music.play();
+      btn.style.display = 'none'; // sembunyikan tombol setelah diputar
+    });
+  </script>
 </body>
 </html>
