@@ -1,87 +1,57 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Undangan</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Grand Opening</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
-<style>
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-}
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #52736b;
+      font-family: 'Arial', sans-serif;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
 
-/* COVER */
-#cover {
-  position: fixed;
-  inset: 0;
-  background: #d8c3a5; /* coklat muda elegan */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 10;
-}
+    .bird {
+      width: 80px;
+      margin-bottom: 20px;
+    }
 
-/* BUTTON */
-#openBtn {
-  padding: 16px 36px;
-  font-size: 18px;
-  border: none;
-  border-radius: 40px;
-  background: #8b5e3c;
-  color: #fff;
-  cursor: pointer;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-  transition: 0.3s ease;
-}
+    .grand-opening {
+      font-family: 'Great Vibes', cursive;
+      font-size: 48px;
+      line-height: 1.2;
+      margin: 0;
+    }
 
-#openBtn:hover {
-  background: #6f4529;
-  transform: scale(1.05);
-}
+    .branch-info {
+      font-size: 22px;
+      margin-top: 30px;
+      font-weight: 600;
+    }
 
-/* CANVA */
-iframe {
-  width: 100%;
-  height: 100vh;
-  border: none;
-  display: none;
-}
-</style>
+    .flower {
+      width: 120px;
+      margin-top: 40px;
+    }
+  </style>
 </head>
-
 <body>
-
-<!-- COVER -->
-<div id="cover">
-  <button id="openBtn" onclick="openInvitation()">Buka Undangan</button>
-</div>
-
-<!-- AUDIO -->
-<audio id="bgm" loop>
-  <source src="lagu.mp3" type="audio/mpeg">
-</audio>
-
-<!-- CANVA -->
-<iframe 
-  id="canvaFrame"
-  src="<div style="position: relative; width: 100%; height: 0; padding-top: 290.5564%;
- padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
- border-radius: 8px; will-change: transform;">
-  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
-    src="https://www.canva.com/design/DAG6hjdHejU/Ay_QY3z66Y2v0j2mqeVwEA/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
-  </iframe>
-</div>
-<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAG6hjdHejU&#x2F;Ay_QY3z66Y2v0j2mqeVwEA&#x2F;view?utm_content=DAG6hjdHejU&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">Grand Opening PT. BPR Bunga Sutra Mas</a> oleh Agus Kurniawan Putra Akp">
-</iframe>
-
-<script>
-function openInvitation() {
-  document.getElementById("bgm").play();
-  document.getElementById("cover").style.display = "none";
-  document.getElementById("canvaFrame").style.display = "block";
-}
-</script>
-
+  <img src="https://i.ibb.co/Fz94Lb7/bird-gold.png" alt="Bird Gold" class="bird" />
+  <h1 class="grand-opening">Grand<br />Opening</h1>
+  <div class="branch-info">
+    Kantor Cabang <br />
+    PT BPR Bunga Sutra Mas
+  </div>
+  <img src="https://i.ibb.co/L54BTfX/white-lily-flower.png" alt="White Lily Flower" class="flower" />
 </body>
 </html>
